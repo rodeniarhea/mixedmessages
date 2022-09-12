@@ -121,16 +121,14 @@ const quoteArray = [ //from https://type.fit/api/quotes
     }
 ]; 
 
-const _random = Math.floor(Math.random() * quoteArray.length);
+
 
 function messageGenerator () {
+    let _random = Math.floor(Math.random() * quoteArray.length);
     let generate = quoteArray[_random];
     let q_text = generate.text;
     let q_author = generate.author;
-    //return "<p> q_text + ' by ' + q_author </p>";
-    document.getElementById("message").innerHTML = q_text + ' by ' + q_author;
-    //return '<p> test </p>';
-    //console.log(generate.text + ' by ' + generate.author);
+    return document.getElementById("message").innerHTML = q_text + ' by ' + q_author;
 };
 
 //console.log(messageGenerator());
